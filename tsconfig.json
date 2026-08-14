@@ -1,0 +1,29 @@
+{
+  "files": [],
+  "references": [
+    {
+      "path": "packages/shared"
+    },
+    {
+      "path": "packages/core"
+    },
+    {
+      "path": "packages/database"
+    },
+    {
+      "path": "packages/market-data"
+    },
+    {
+      "path": "packages/news"
+    },
+    {
+      "path": "packages/indicators"
+    },
+    {
+      "path": "packages/scoring"
+    },
+    {
+      "path": "packages/paper-trading"
+    }
+  ]
+}

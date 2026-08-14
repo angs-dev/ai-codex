@@ -1,0 +1,2 @@
+export const DEFAULT_SWING10_WEIGHTS = Object.freeze({ marketRegime: 15, fundamentalEvent: 15, trendRelativeStrength: 15, momentum: 10, candle: 10, volume: 10, entryQuality: 25 });
+export const HARD_REJECTION_GATES = Object.freeze(["POOR_LIQUIDITY","STALE_DATA","INSUFFICIENT_DATA","LOW_RISK_REWARD","EXTREME_EXTENSION","FAILED_BREAKOUT","NEGATIVE_EVENT","HIGH_RISK_MARKET","ABNORMAL_SPREAD","NEARBY_MAJOR_RISK","LOW_CONFIDENCE_SOURCE"] as const);

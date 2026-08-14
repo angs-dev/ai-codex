@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "composite": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "paths": {
+      "@swing10/shared": [
+        "packages/shared/src/index.ts"
+      ],
+      "@swing10/core": [
+        "packages/core/src/index.ts"
+      ],
+      "@swing10/database": [
+        "packages/database/src/index.ts"
+      ],
+      "@swing10/market-data": [
+        "packages/market-data/src/index.ts"
+      ],
+      "@swing10/news": [
+        "packages/news/src/index.ts"
+      ],
+      "@swing10/indicators": [
+        "packages/indicators/src/index.ts"
+      ]
+    },
+    "baseUrl": ".",
+    "ignoreDeprecations": "6.0"
+  }
+}

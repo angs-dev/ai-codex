@@ -1,4 +1,0 @@
-symbol,exchange,timeframe,exchangeTimestamp,localReceiveTimestamp,open,high,low,close,volume
-FIXTURE,NSE,1m,2025-01-01T03:45:00Z,2025-01-01T03:45:01Z,1,2,0,1,100
-FIXTURE,NSE,1m,2025-01-01T03:46:00Z,2025-01-01T03:46:01Z,2,3,1,2,200
-FIXTURE,NSE,1m,2025-01-01T03:47:00Z,2025-01-01T03:47:01Z,3,4,2,3,300

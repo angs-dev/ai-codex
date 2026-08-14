@@ -1,0 +1,1 @@
+declare module "node:http"{export function createServer(handler:(request:{method?:string;url?:string},response:any)=>void):{listen(port:number,callback:()=>void):void};}declare const process:{env:Record<string,string|undefined>;stdout:{write(value:string):void}};

@@ -1,0 +1,1 @@
+{"name":"@swing10/scanner","version":"0.1.0","private":true,"type":"module","main":"dist/index.js","scripts":{"start":"node dist/index.js","scan:once":"node dist/index.js --once"},"dependencies":{"@swing10/core":"*","@swing10/market-data":"*","@swing10/shared":"*"}}

@@ -1,0 +1,30 @@
+name: SWING-10 market scan
+on:
+  workflow_dispatch:
+  schedule:
+    # GitHub cron is UTC and best-effort, not a reliable one-minute scheduler.
+    # 03:45–10:00 UTC broadly covers 09:15–15:30 IST on weekdays.
+    - cron: "*/5 4-9 * * 1-5"
+    - cron: "45-59/5 3 * * 1-5"
+    - cron: "0 10 * * 1-5"
+concurrency:
+  group: swing10-market-scan
+  cancel-in-progress: false
+permissions:
+  contents: read
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: npm install
+      - name: Scan news and market once
+        run: npm run scan:once
+        env:
+          UPSTOX_ANALYTICS_TOKEN: ${{ secrets.UPSTOX_ANALYTICS_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}

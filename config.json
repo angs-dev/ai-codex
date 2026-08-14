@@ -1,0 +1,6 @@
+{
+  "paperTrading": {"initialCapital":10000,"maxRiskPercent":1},
+  "swing10":{"version":"swing10-v1","weights":{"marketRegime":15,"fundamentalEvent":15,"trendRelativeStrength":15,"momentum":10,"candle":10,"volume":10,"entryQuality":25}},
+  "gates":{"minimumRiskReward":1.5,"maximumSpreadPercent":0.5,"minimumSourceConfidence":0.7},
+  "freshness":{"realtime":{"freshForMs":5000,"staleAfterMs":15000},"nearRealtime":{"freshForMs":60000,"staleAfterMs":180000}}
+}

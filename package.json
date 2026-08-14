@@ -1,0 +1,28 @@
+{
+  "name": "swing-10-market-intelligence",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Zero-cost Indian market intelligence and paper-trading research platform",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "node scripts/link-workspaces.mjs && tsc -b",
+    "typecheck": "tsc -b --pretty false",
+    "test": "npm run build && node --test test/*.test.mjs",
+    "clean": "tsc -b --clean",
+    "scan:once": "npm run build && node apps/scanner/dist/index.js --once",
+    "scanner:start": "npm run build && node apps/scanner/dist/index.js",
+    "api:start": "npm run build && node apps/api/dist/index.js",
+    "dashboard:start": "npm --workspace @swing10/dashboard run dev",
+    "dev": "sh -c 'npm run api:start & npm run dashboard:start'",
+    "workspaces:link": "node scripts/link-workspaces.mjs"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "devDependencies": {
+    "typescript": "^6.0.0"
+  }
+}
